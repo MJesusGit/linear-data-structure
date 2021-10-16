@@ -40,4 +40,20 @@ public class Problem {
 		}
 		return second_Stack;
 	}
+	
+	public int nine_counter(Stack<Integer> second_Stack) {
+		Stack<Integer> third_Stack = new Stack<Integer>();
+		int number = 0;
+
+		for (int i = 0; i < second_Stack.size(); i++) {
+			number = number + second_Stack.peek();
+			if (number >= 9) {
+				third_Stack.push(9);
+				number = 0;
+			}
+			second_Stack.pop();
+		}
+		return third_Stack.size();
+	}
 }
+
