@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class ReadFile {
 
-	private String fileName = "C\\:naturales.dat.txt";
+	private String fileName = "";
 
 	/*************************************************************************************************************
 	 * * * Method name: read_File * * Author/s name: Andrés González Varela, María Jesús Dueñas Recuero, 		 *
@@ -18,8 +18,8 @@ public class ReadFile {
 	 * in the array. If the file is not found it will be indicated by terminal. 								 *
 	 *************************************************************************************************************/
 	
-	public int[] read_File() throws FileNotFoundException {
-		File file = new File(fileName);
+	public int[] read_File(String fileRoute) throws FileNotFoundException {
+		File file = new File(fileRoute);
 		Scanner reader = new Scanner(file);
 		int counter = 0;
 		int[] auxiliar_Number = null;
