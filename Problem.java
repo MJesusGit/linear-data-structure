@@ -24,8 +24,9 @@ public class Problem {
 		for (int i = 0; i < numbers_File.length; i++) {
 			if (first_Stack.isEmpty()) {
 				first_Stack.push(numbers_File[i]);
-			} else {
-				if (first_Stack.peek() + numbers_File[i] == 9 && first_Stack.peek() < numbers_File[i]) {
+			}else if ((i+1)==numbers_File.length){ 
+				break;
+			}else if (first_Stack.peek() + numbers_File[i+1] == 9 && first_Stack.peek() < numbers_File[i]) {
 					repeated = second_Stack.push(first_Stack.pop());
 					second_Stack.push(repeated);
 
@@ -34,13 +35,12 @@ public class Problem {
 					second_Stack.push(repeated);
 					first_Stack.pop();
 
-				} else if (first_Stack.peek() + numbers_File[i] != 9) {
+				} else if (first_Stack.peek() + numbers_File[i+1] != 9) {
 					first_Stack.push(numbers_File[i]);
-				}
+				} 
 			}
-		}
 		return second_Stack;
-	}
+		}
 	
 	public int nine_counter(Stack<Integer>second_Stack) {
 		Stack<Integer> third_Stack = new Stack<Integer>();
