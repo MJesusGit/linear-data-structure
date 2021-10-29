@@ -1,11 +1,8 @@
-package stack;
-
 import java.io.*;
 import java.util.*;
 
 public class ReadFile {
 
-	@SuppressWarnings("unused")
 	private String fileName = "";
 
 	Stack<Integer> auxiliar_Stack = new Stack<Integer>();
@@ -17,7 +14,7 @@ public class ReadFile {
 	     *                                                                                                           *
 	     * * * Description of the Method: This method will read the file that is located in the root that it is      *
 	     * given. First of all the method will count how many numbers there is on the file and then it creates an    *
-	     * array of that lengh. After this the method reads number by number, introducing the number in the file    *
+	     * array of that lengh. After this the method reads number by number, introducing the number in the file     *
 	     * in the array. If the file is not found it will be indicated by terminal.                                  *
 	     *************************************************************************************************************/
 
@@ -34,12 +31,12 @@ public class ReadFile {
 				aux_number_stack_file.push(number_File);
 			}
 
-			while(!aux_number_stack_file.isEmpty()) {
+			while (!aux_number_stack_file.isEmpty()) {
 
 				number_Stack_File.push(aux_number_stack_file.pop());
 
 			}
-			
+
 		} catch (Exception ex) {
 			System.out.println("Message: " + ex.getMessage());
 
