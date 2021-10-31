@@ -1,3 +1,4 @@
+package stack;
 public class EmptyStackException extends Exception {
 	/*************************************************************************************************************
      * * * Method name: read_File * * Author/s name: Andrés González Varela, María Jesús Dueñas Recuero,         *

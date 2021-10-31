@@ -1,3 +1,4 @@
+package stack;
 import java.io.FileNotFoundException;
 import java.util.*;
 
@@ -16,7 +17,7 @@ public class Main {
 		ReadFile read = new ReadFile(file);
 		file_Stack = read.read_File(file);
 		main_Second_Stack = stacks.fill_Stacks(file_Stack);
-		System.out.println(stacks.nine_counter(main_Second_Stack));
+		System.out.println("The total nines in the third stack are: "+stacks.nine_counter(main_Second_Stack));
 
 	}
 }

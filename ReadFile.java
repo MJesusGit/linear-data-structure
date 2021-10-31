@@ -1,3 +1,4 @@
+package stack;
 import java.io.*;
 import java.util.*;
 
@@ -13,9 +14,10 @@ public class ReadFile {
 	     * Juan Gigante Ríos.                                                                                    	 *
 	     *                                                                                                           *
 	     * * * Description of the Method: This method will read the file that is located in the root that it is      *
-	     * given. First of all the method will count how many numbers there is on the file and then it creates an    *
-	     * array of that lengh. After this the method reads number by number, introducing the number in the file     *
-	     * in the array. If the file is not found it will be indicated by terminal.                                  *
+	     * given. The first thing the method does is to read the numbers in the file whenever there is a next        *
+	     * number. These will be added to a stack in the reverse order to the one they appear in the file, so a      *
+	     * while loop is performed to turn the stack around so that they appear in the right order.If the file is    *
+	     * not found it will be indicated by terminal.                                                               *
 	     *************************************************************************************************************/
 
 	public Stack<Integer> read_File(String fileRoute) throws FileNotFoundException {
