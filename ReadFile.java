@@ -41,6 +41,10 @@ public class ReadFile {
 			} while (books_Separator.hasMoreTokens());
 		} while (reader.hasNext());
 		
+		for(int i=0;i<list_book_file.size();i++) {
+			list_book_file.get(i).toString();
+			
+		}
 		
 
 		reader.close();
