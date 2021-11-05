@@ -17,7 +17,7 @@ public class ReadFile {
 
 	public List<Book> fill_list() throws FileNotFoundException {
 		File file = new File(fileName);
-		List<Book> list_book_file = new LinkedList();
+		List<Book> list_book_file = new LinkedList<Book>();
 		Scanner reader = new Scanner(file);
 		String author, tittle,genre, aux_rating;
 		Book each_Book;
@@ -40,6 +40,8 @@ public class ReadFile {
 
 			} while (books_Separator.hasMoreTokens());
 		} while (reader.hasNext());
+		
+		
 
 		reader.close();
 		return list_book_file;
