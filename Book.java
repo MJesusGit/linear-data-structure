@@ -7,7 +7,6 @@ public class Book {
 	
 		
 	public Book(String author, String tittle, double rating) {
-		super();
 		this.author = author;
 		this.tittle = tittle;
 		this.rating = rating;
