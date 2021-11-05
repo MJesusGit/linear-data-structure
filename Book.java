@@ -3,12 +3,15 @@ package list;
 public class Book {
 	private String author;
 	private String tittle;
+	private String genre;
 	private double rating;
 	
 		
-	public Book(String author, String tittle, double rating) {
+	
+	public Book(String author, String tittle, String genre, double rating) {
 		this.author = author;
 		this.tittle = tittle;
+		this.genre = genre;
 		this.rating = rating;
 	}
 	public String getAuthor() {
@@ -28,6 +31,12 @@ public class Book {
 	}
 	public void setRating(double rating) {
 		this.rating = rating;
+	}
+	public String getGenre() {
+		return genre;
+	}
+	public void setGenre(String genre) {
+		this.genre = genre;
 	}
 	
 	

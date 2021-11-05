@@ -19,7 +19,7 @@ public class ReadFile {
 		File file = new File(fileName);
 		List<Book> list_book_file = new LinkedList();
 		Scanner reader = new Scanner(file);
-		String author, tittle, aux_rating;
+		String author, tittle,genre, aux_rating;
 		Book each_Book;
 		String each_line_Book;
 		double rating;
@@ -31,10 +31,11 @@ public class ReadFile {
 			do {
 				tittle = category_Separator.nextToken();
 				author = category_Separator.nextToken();
+				genre= category_Separator.nextToken();
 				aux_rating = category_Separator.nextToken();
 				rating = Double.parseDouble(aux_rating);
 
-				each_Book = new Book(tittle, author, rating);
+				each_Book = new Book(tittle, author,genre, rating);
 				list_book_file.add(each_Book);
 
 			} while (books_Separator.hasMoreTokens());
