@@ -1,4 +1,4 @@
-package list;
+package lists;
 
 public class Book {
 	private String author;

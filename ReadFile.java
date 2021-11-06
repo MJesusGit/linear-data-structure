@@ -1,4 +1,4 @@
-package list;
+package lists;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,7 +15,7 @@ public class ReadFile {
 		this.fileName = fileName;
 	}
 
-	public List<Book> fill_list() throws FileNotFoundException {
+	public List<Book> fill_list(String fileName) throws FileNotFoundException {
 		File file = new File(fileName);
 		List<Book> list_book_file = new LinkedList<Book>();
 		Scanner reader = new Scanner(file);
@@ -26,7 +26,6 @@ public class ReadFile {
 
 		do {
 			each_line_Book = reader.nextLine();
-			StringTokenizer books_Separator = new StringTokenizer(each_line_Book, "\n");
 			StringTokenizer category_Separator = new StringTokenizer(each_line_Book, ";");
 			do {
 				tittle = category_Separator.nextToken();
@@ -34,19 +33,11 @@ public class ReadFile {
 				genre= category_Separator.nextToken();
 				aux_rating = category_Separator.nextToken();
 				rating = Double.parseDouble(aux_rating);
-
 				each_Book = new Book(tittle, author,genre, rating);
 				list_book_file.add(each_Book);
 
-			} while (books_Separator.hasMoreTokens());
+			} while (category_Separator.hasMoreTokens());
 		} while (reader.hasNext());
-		
-		for(int i=0;i<list_book_file.size();i++) {
-			list_book_file.get(i).toString();
-			
-		}
-		
-
 		reader.close();
 		return list_book_file;
 
