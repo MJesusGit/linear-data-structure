@@ -25,7 +25,8 @@ public class Problem {
 	* has all the books from the file stored						     *
 	*																     *
 	* Return value: This method will return a list with Book type 		 *
-	* objects  															 *
+	* objects  		
+	* D:\WORKSPACE_ECLIPSE\lists\src\lists\books.txt													 *
 	*********************************************************************/
 	
 	public List<Book> top_10_book(List<Book> list_book_file) {
@@ -33,14 +34,21 @@ public class Problem {
 		for (int i = 0; i < list_book_file.size(); i++) {
 			if (top_10_books.isEmpty()) {
 				top_10_books.add(list_book_file.get(i));
-			}else {
+			} else {
 				compareBook = list_book_file.get(i);
-				for (int j = 0; j < top_10_books.size(); i++) {
-					if (top_10_books.get(i).compareTo(compareBook)==-1) {
-						top_10_books.add(i+1, compareBook);
-					}else if (top_10_books.get(i).compareTo(compareBook)==1) {
-						top_10_books.add(i, compareBook);
+				for (int j = 0; j < top_10_books.size(); j++) {
+					if (top_10_books.get(j).compareTo(compareBook) == 1 || top_10_books.get(j).compareTo(compareBook) == 0) {
+						Book listBook = top_10_books.get(j);
+						top_10_books.set(j, compareBook);
+						top_10_books.add(j + 1, listBook);
+						if (top_10_books.size() > 10) {
+							top_10_books.remove(top_10_books.size() - 1);
+						}
+						break;
 					}
+				}
+				if(top_10_books.size() < 10) {
+					top_10_books.add(compareBook);
 				}
 			}
 		}
@@ -48,22 +56,60 @@ public class Problem {
 	}
 
 	public List<Book> list_adults(List<Book> list_book_file) {
+		Book compareBook;
 		for (int i = 0; i < list_book_file.size(); i++) {
-			if (list_book_file.get(i).getGenre() == "Sci-Fi" || list_book_file.get(i).getGenre() == "Biography"|| list_book_file.get(i).getGenre() == "Novel") {
-				list_adult.add(list_book_file.get(i));
+			if (list_book_file.get(i).getGenre().equals("Sci-Fi") || list_book_file.get(i).getGenre().equals("Biography") || list_book_file.get(i).getGenre().equals("Novel")) {
+				if (list_adult.isEmpty()) {
+					list_adult.add(list_book_file.get(i));
+				} else {
+					compareBook = list_book_file.get(i);
+					for (int j = 0; j < list_adult.size(); j++) {
+						if (list_adult.get(j).compareTo(compareBook) == 1 || list_adult.get(j).compareTo(compareBook) == 0) {
+							Book listBook = list_adult.get(j);
+							list_adult.set(j, compareBook);
+							list_adult.add(j + 1, listBook);
+							if (list_adult.size() > 3) {
+								list_adult.remove(list_adult.size() - 1);
+							}
+							break;
+						}
+					}
+					if (list_adult.size() < 3) {
+						list_adult.add(compareBook);
+					}
+				}
+				
 			}
 		}
-
 		return list_adult;
 	}
 
 	public List<Book> list_children(List<Book> list_book_file) {
+		Book compareBook;
 		for (int i = 0; i < list_book_file.size(); i++) {
-			if (list_book_file.get(i).getGenre() == "Children") {
-				list_children.add(list_book_file.get(i));
+			if (list_book_file.get(i).getGenre().equals("Children")) {
+				if (list_children.isEmpty()) {
+					list_children.add(list_book_file.get(i));
+				} else {
+					compareBook = list_book_file.get(i);
+					for (int j = 0; j < list_children.size(); j++) {
+						if (list_children.get(j).compareTo(compareBook) == 1 || list_children.get(j).compareTo(compareBook) == 0) {
+							Book listBook = list_children.get(j);
+							list_children.set(j, compareBook);
+							list_children.add(j + 1, listBook);
+							if (list_children.size() > 3) {
+								list_children.remove(list_children.size() - 1);
+							}
+							break;
+						}
+					}
+					if (list_children.size() < 3) {
+						list_children.add(compareBook);
+					}
+				}
+				
 			}
 		}
-
 		return list_children;
 	}
 

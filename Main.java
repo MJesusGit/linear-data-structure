@@ -35,15 +35,21 @@ public class Main {
 			switch (option) {
 			case 1:
 				top_10_books = lists.top_10_book(list_book_file);
-				for (int j = 0; j < top_10_books.size();j++) {
-					System.out.println(top_10_books.get(j).toString());
+				for (int i = 0; i < top_10_books.size();i++) {
+					System.out.println(top_10_books.get(i).toString());
 				}
 				break;
 			case 2:
-
+				list_adult = lists.list_adults(list_book_file);
+				for (int i = 0;i < list_adult.size();i++) {
+					System.out.println(list_adult.get(i).toString());
+				}
 				break;
 			case 3:
-
+				list_children = lists.list_children(list_book_file);
+				for (int i = 0; i < list_children.size();i++) {
+					System.out.println(list_children.get(i).toString());
+				}
 				break;
 			case 4:
 				break;

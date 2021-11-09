@@ -1,12 +1,14 @@
 package lists;
 
+import java.util.Arrays;
+
 public class Book  {
 	private String author;
 	private String tittle;
 	private String genre;
 	private double rating;
 
-	public Book(String author, String tittle, String genre, double rating) {
+	public Book(String tittle, String author, String genre, double rating) {
 		this.author = author;
 		this.tittle = tittle;
 		this.genre = genre;
@@ -39,9 +41,11 @@ public class Book  {
 		} else if (rating < b.getRating()) {
 			result = 1;
 		} else if (rating == b.getRating()) {
-			if (tittle.compareTo(getTittle()) == -1) {
+			String [] titulos = new String[] {tittle, b.getTittle()};
+			Arrays.sort(titulos);
+			if (titulos[0].equals(tittle)) {
 				result = -1;
-			} else if (tittle.compareTo(getTittle()) == 1) {
+			} else if (titulos[0].equals(b.getTittle())) {
 				result = 1;
 			}
 		}
