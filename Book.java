@@ -8,6 +8,10 @@ public class Book implements Comparable<Book>{
 	private String genre;
 	private double rating;
 
+	/***************************************************************************************************************
+	 * This method is the constructor of this class																   *
+	 ***************************************************************************************************************/
+	
 	public Book(String tittle, String author, String genre, double rating) {
 		this.author = author;
 		this.tittle = tittle;
@@ -16,22 +20,22 @@ public class Book implements Comparable<Book>{
 	}
 	
 	/*********************************************************************
-	* Method name: compareTo											 *
-	*																	 *
-	* Name of the original author: Andrés González Vareña, Maria Jesus  *
-	* Dueñas Recuero, Juan Gigante Rios.								 *
-	*																	 *
-	* Description of the Method: This method is the one that we will be  *
-	* using for compare the rating of each book to position it in the 	 *
-	* Top 10 list if it is necessary. In case that the rating is the 	 *
-	* same we will be comparing the titles in alphabetical order. 		 *
-	*																	 *
-	* Calling arguments: In this method we introduce an argument of the  *
-	* type Book an in the case of this method is going to be the Book    *
-	* that will be compared with the other ones in the list.			 *
-	* 																     *
-	* Return value: This method will return a value of int type that is  *
-	*  going to be 1 or -1 depending on the result of the comparations.  *
+	* Method name: compareTo											 
+	*																	 
+	* Name of the original author: Andrés González Varela, Maria Jesus  
+	* Dueñas Recuero, Juan Gigante Rios.								 
+	*																	 
+	* Description of the Method: This method is the one that we will be  
+	* using for compare the rating of each book to position it in the 	 
+	* Top 10 list if it is necessary. In case that the rating is the 	 
+	* same we will be comparing the titles in alphabetical order. 		 
+	*																	 
+	* Calling arguments: In this method we introduce an argument of the  
+	* type Book an in the case of this method is going to be the Book    
+	* that will be compared with the other ones in the list.			 
+	* 																     
+	* Return value: This method will return a value of int type that is  
+	* going to be 1 or -1 depending on the result of the comparations.  
 	*********************************************************************/
 	
 	public int compareTo(Book b) {

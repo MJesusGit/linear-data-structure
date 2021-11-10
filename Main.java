@@ -7,6 +7,25 @@ import java.io.*;
 
 public class Main {
 	
+	/*****************************************************************************
+	* Method name: main											 
+	*																	 
+	* Name of the original author: Andrés González Varela, Maria Jesus   
+	* Dueñas Recuero, Juan Gigante Rios.								 
+	*																	 
+	* Description of the Method: This is the main of the program where we
+	* execute the whole problem. First we create some lists that we will need
+	* throught the whole problem, then we create a file and ask for the 
+	* direction of the file. After this we creathe two objects, one from 
+	* ReadFile class and another from the Problem class and after this we 
+	* fill the list of books calling for the corresponding method. Next we fill 
+	* each genre list as it is asked in the problem, then we make the same with
+	* the top ten list and after this we use the method to change the list to 
+	* the promo list. After we fullfil all the tasks we have a menu so the 
+	* user can access to the list that he wants by pressing the corresponding 
+	* number or pressing 7 to end the program. 
+	****************************************************************************/
+	
 	public static void main(String [] args)throws FileNotFoundException {
 		
 		boolean exit = false;
