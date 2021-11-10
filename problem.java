@@ -24,22 +24,53 @@ public class problem {
 
 		Queue<person> finalqueue = new LinkedBlockingQueue<person>();
 
+		int max = 0;
+		switch (queue) {
+		case "coliseum E1":
+			max = 25;
+			break;
+		case "roar of the sea":
+			max = 20;
+			break;
+		case "siren song":
+			max = 15;
+			break;
+		}
+
 		for (int i = 0; i < peoplequeue.size(); i++) {
 
 			switch (queue) {
 			case "coliseum E1":
-				if (peoplequeue.element().stagename == "coliseum E1") {
-					finalqueue.offer(peoplequeue.poll());
+				if (i < max) {
+					if (peoplequeue.element().stagename == "coliseum E1") {
+						finalqueue.offer(peoplequeue.poll());
+					} else {
+						peoplequeue.remove();
+					}
+				}else {
+					peoplequeue.remove();
 				}
 				break;
 			case "roar of the sea":
-				if (peoplequeue.element().stagename == "roar of the sea") {
-					finalqueue.offer(peoplequeue.poll());
+				if (i < max) {
+					if (peoplequeue.element().stagename == "roar of the sea") {
+						finalqueue.offer(peoplequeue.poll());
+					} else {
+						peoplequeue.remove();
+					}
+				}else {
+					peoplequeue.remove();
 				}
 				break;
 			case "siren song":
-				if (peoplequeue.element().stagename == "siren song") {
-					finalqueue.offer(peoplequeue.poll());
+				if (i < max) {
+					if (peoplequeue.element().stagename == "siren song") {
+						finalqueue.offer(peoplequeue.poll());
+					} else {
+						peoplequeue.remove();
+					}
+				}else {
+					peoplequeue.remove();
 				}
 				break;
 			}
