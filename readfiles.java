@@ -25,8 +25,9 @@ public class readfiles {
 				System.out.print("The file " + file + " does no exist. Try it again: ");
 				file = sc.nextLine();
 			}
-		} while (lecturaCorrecta);
+		} while (!lecturaCorrecta);
 
+		
 		while (reader.hasNext()) {
 			String row = reader.nextLine();
 			filequeue.add(row);
