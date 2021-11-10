@@ -95,8 +95,7 @@ public class Problem {
 		}
 		
 		//SUBIR ULTIMO AL PRIMER PUESTO Y PONERLE 5 ESTRELLAS
-		int last_book = top_ten_list.size()-1;
-		Book aux_last_book = new Book(top_ten_list.get(last_book).getTittle(), top_ten_list.get(last_book).getAuthor(), top_ten_list.get(last_book).getGenre(), top_ten_list.get(last_book).getRating());
+		Book aux_last_book = ten_promo_list.get(ten_promo_list.size()-1);
 		ten_promo_list.remove(ten_promo_list.size()-1);
 		ten_promo_list.add(0, aux_last_book);
 		ten_promo_list.get(0).setRating(5);
