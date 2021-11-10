@@ -8,7 +8,7 @@ public class problem {
 	Queue<String> queue = new LinkedBlockingQueue<String>();
 
 	// to create a general people queue
-	public Queue<person> peoplequeue(Queue<String> file) {
+	public static Queue<person> peoplequeue(Queue<String> file) {
 
 		Queue<person> personqueue = new LinkedBlockingQueue<person>();
 
@@ -20,7 +20,7 @@ public class problem {
 	}
 
 	// distribution of people in the different queues
-	public Queue<person> distributepeople(String queue, Queue<person> peoplequeue) {
+	public static Queue<person> distributepeople(String queue, Queue<person> peoplequeue) {
 
 		Queue<person> finalqueue = new LinkedBlockingQueue<person>();
 
@@ -48,7 +48,7 @@ public class problem {
 	}
 
 	// counter of people that entered to each stage
-	public int counter(Queue<person> peoplequeue) {
+	public static int counter(Queue<person> peoplequeue) {
 		int counter = 0;
 		for (int i = 0; i < peoplequeue.size(); i++) {
 			peoplequeue.remove();
@@ -58,7 +58,7 @@ public class problem {
 	}
 
 	// calculation of queues' time
-	public int calculatetime(Queue<person> peoplequeue) {
+	public static int calculatetime(Queue<person> peoplequeue) {
 
 		int minutes = 0;
 

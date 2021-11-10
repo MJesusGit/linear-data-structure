@@ -32,4 +32,8 @@ public class readfiles {
 
 		return filequeue;
 	}
+	
+	public readfiles(String filename) {
+		this.filename = filename;
+	}
 }
