@@ -46,22 +46,22 @@ public class problem {
 		}
 		return finalqueue;
 	}
-	//counter of people that entered to each stage
+
+	// counter of people that entered to each stage
 	public int counter(Queue<person> peoplequeue) {
-		
 		int counter = 0;
-		
-		for (int i = 0; i<peoplequeue.size(); i++) {
+		for (int i = 0; i < peoplequeue.size(); i++) {
 			peoplequeue.remove();
 			counter = counter + 1;
 		}
 		return counter;
 	}
-	//calculation of queues' time
+
+	// calculation of queues' time
 	public int calculatetime(Queue<person> peoplequeue) {
-		
+
 		int minutes = 0;
-		
+
 		for (int i = 0; i < peoplequeue.size(); i++) {
 			switch (peoplequeue.poll().ticket) {
 			case "Platinum":
@@ -80,7 +80,7 @@ public class problem {
 		}
 		return minutes;
 	}
-	
+
 	public problem(Queue<String> queue) {
 		this.queue = queue;
 	}
