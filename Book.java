@@ -2,7 +2,7 @@ package lists;
 
 import java.util.Arrays;
 
-public class Book  {
+public class Book implements Comparable<Book>{
 	private String author;
 	private String tittle;
 	private String genre;
