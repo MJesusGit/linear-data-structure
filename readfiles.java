@@ -2,37 +2,40 @@ package queues;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class readfiles {
+	final static Scanner sc = new Scanner(System.in);
 
 	private String filename = "C\\:people.txt";
 
-	public Queue<String> readfile(String file) throws FileNotFoundException {
-
-		File f = new File(filename);
-		Scanner reader = new Scanner(f);
-
+	public Queue<String> readfile(String file) {
 		Queue<String> filequeue = new LinkedBlockingQueue<String>();
-
-		try {
-
-			System.out.println("Reading the file...");
-			while (reader.hasNext()) {
-				String data = reader.next();
-				filequeue.offer(data);
+		boolean lecturaCorrecta = false;
+		Scanner reader = null;
+		do {
+			try {
+				File f = new File(file);
+				reader = new Scanner(f);
+				lecturaCorrecta = true;
+			} catch (FileNotFoundException e) {
+				System.out.print("The file " + file + " does no exist. Try it again: ");
+				file = sc.nextLine();
 			}
-		} catch (Exception ex) {
-			System.out.println(ex.getMessage());
+		} while (lecturaCorrecta);
+
+		while (reader.hasNext()) {
+			String row = reader.nextLine();
+			filequeue.add(row);
 		}
 
-		reader.close();
-
 		return filequeue;
+
 	}
-	
+
 	public readfiles(String filename) {
 		this.filename = filename;
 	}
