@@ -6,7 +6,7 @@ public class Main {
 	/************************************************************************
 	* Method name: main											 
 	*																	 
-	* Name of the original author: Andrés González Vareña, Maria Jesus   
+	* Name of the original author: Andrés González Varela, Maria Jesus   
 	* Dueñas Recuero, Juan Gigante Rios.								 
 	*																	 
 	* Description of the Method: This is the main of the program where we

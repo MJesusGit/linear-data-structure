@@ -11,7 +11,7 @@ public class ReadFile {
 	/**************************************************************************
 	* Method name: read_File											 
 	*																	 
-	* Name of the original author: Andrés González Vareña, Maria Jesus   
+	* Name of the original author: Andrés González Varela, Maria Jesus   
 	* Dueñas Recuero, Juan Gigante Rios.								 
 	*																	 
 	* Description of the Method: This method will read the file that is 

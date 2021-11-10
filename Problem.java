@@ -8,7 +8,7 @@ public class Problem {
 	/****************************************************************************
 	* Method name: fill_Stacks											 
 	*																	 
-	* Name of the original author: Andrés González Vareña, Maria Jesus   
+	* Name of the original author: Andrés González Varela, Maria Jesus   
 	* Dueñas Recuero, Juan Gigante Rios.								 
 	*																	 
 	* Description of the Method: First of all it will check if 
@@ -65,7 +65,7 @@ public class Problem {
 	/************************************************************************
 	* Method name: nine_counter										 
 	*																	 
-	* Name of the original author: Andrés González Vareña, Maria Jesus   
+	* Name of the original author: Andrés González Varela, Maria Jesus   
 	* Dueñas Recuero, Juan Gigante Rios.								 
 	*																	 
 	* Description of the Method: This method will receive the second 

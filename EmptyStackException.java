@@ -2,7 +2,7 @@ public class EmptyStackException extends Exception {
 	/****************************************************************************
 	 * Method name: EmptyStackException
 	 * 
-	 * Name of the original author: Andrés González Vareña, Maria Jesus Dueñas
+	 * Name of the original author: Andrés González Varela, Maria Jesus Dueñas
 	 * Recuero, Juan Gigante Rios.
 	 * 
 	 * Description of the Method: This is an exception that we have created to
