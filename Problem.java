@@ -1,4 +1,3 @@
-package stack;
 import java.util.*;
 import java.util.EmptyStackException;
 import java.io.*;
@@ -6,16 +5,27 @@ import java.io.*;
 public class Problem {
 	Stack<Integer> first_Stack = new Stack<Integer>();
 
-	/*************************************************************************************************************
-	 * * * Method name: fill_Stacks * * Author/s name: Andrés González Varela, María				
-	 * Jesús Dueñas Recuero, * Juan Gigante Ríos. * * * * Description of the Method:
-	 * This method will fill the stacks one by one checking if the addition of * the
-	 * number in the array and the number on the top of the first stack is 9 or not,
-	 * depending on the result * we will increase the first or the second stack. In
-	 * case the first stack is empty the number of the array * will be pushed on
-	 * this stack. On the end we will return the second_Stack that we will have to
-	 * use later * *
-	 *************************************************************************************************************/
+	/****************************************************************************
+	* Method name: fill_Stacks											 
+	*																	 
+	* Name of the original author: Andrés González Vareña, Maria Jesus   
+	* Dueñas Recuero, Juan Gigante Rios.								 
+	*																	 
+	* Description of the Method: First of all it will check if 
+	* the received stack is empty. Then this method will fill the stacks 
+	* one by one checking if the addition of the number in the array 
+	* and the number on the top of the first stack is 9 or not, 
+	* depending on the result we will increase the first or the second 
+	* stack. In case the first stack is empty the number of the received stack   
+	* will be pushed on this stack. On the end we will return the 
+	* second_Stack that we will have to use later.
+	*																	 
+	* Calling arguments: In this method we introduce a stack which will have 
+	* all the numbers from the file in the correct order.  
+	* 																     
+	* Return value: This method will return a stack with numbers, called
+	* second_Stack 
+	******************************************************************************/
 
 	public Stack<Integer> fill_Stacks(Stack<Integer> file_Stack) throws FileNotFoundException, EmptyStackException {
 		Stack<Integer> second_Stack = new Stack<Integer>();
@@ -52,14 +62,23 @@ public class Problem {
 		return second_Stack;
 	}
 
-	/*************************************************************************************************************
-     * * * Method name: read_File * * Author/s name: Andrés González Varela, María Jesús Dueñas Recuero,         *
-     * Juan Gigante Ríos.                  	                                                                	 *                                                                                           *
-     * * * Description of the Method: This method will take the Second Stack and will be making additions		 *
-     * of the numbers that are stored in it, popping number by number, when the addition of 2 or more numbers 	 *
-     * add up to 9 or more we will store a 9 in a third stack and after finishing we will print the number of 9's*
-     * stored.																									 *
-     *************************************************************************************************************/
+	/************************************************************************
+	* Method name: nine_counter										 
+	*																	 
+	* Name of the original author: Andrés González Vareña, Maria Jesus   
+	* Dueñas Recuero, Juan Gigante Rios.								 
+	*																	 
+	* Description of the Method: This method will receive the second 
+	* stack and it will start adding numbers until the result of the 
+	* add its nine or higher. Each time this happends the problem will 
+	* introduce a 9 in a third stack.
+	*																	 
+	* Calling arguments: This method receives a stack of integers called
+	* second_Stack.   
+	* 																     
+	* Return value: This method will return the size of the stack that 
+	* has all the nines stored (third_Stack)
+	*********************************************************************/
 
 
 	public int nine_counter(Stack<Integer> second_Stack) {
@@ -72,11 +91,13 @@ public class Problem {
 				addition = 0;
 			}
 		}
-
 		return third_Stack.size();
-
 	}
 
+	/***************************************************************************************************************
+	 * This method is the constructor of this class																   *
+	 ***************************************************************************************************************/
+	
 	public Problem(Stack<Integer> first_Stack) {
 		this.first_Stack = first_Stack;
 	}

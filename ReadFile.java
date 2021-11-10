@@ -1,4 +1,3 @@
-package stack;
 import java.io.*;
 import java.util.*;
 
@@ -9,16 +8,24 @@ public class ReadFile {
 	Stack<Integer> auxiliar_Stack = new Stack<Integer>();
 	Stack<Integer> file_Stack = new Stack<Integer>();
 		
-		/*************************************************************************************************************
-	     * * * Method name: read_File * * Author/s name: Andrés González Varela, María Jesús Dueñas Recuero,         *
-	     * Juan Gigante Ríos.                                                                                    	 *
-	     *                                                                                                           *
-	     * * * Description of the Method: This method will read the file that is located in the root that it is      *
-	     * given. The first thing the method does is to read the numbers in the file whenever there is a next        *
-	     * number. These will be added to a stack in the reverse order to the one they appear in the file, so a      *
-	     * while loop is performed to turn the stack around so that they appear in the right order.If the file is    *
-	     * not found it will be indicated by terminal.                                                               *
-	     *************************************************************************************************************/
+	/**************************************************************************
+	* Method name: read_File											 
+	*																	 
+	* Name of the original author: Andrés González Vareña, Maria Jesus   
+	* Dueñas Recuero, Juan Gigante Rios.								 
+	*																	 
+	* Description of the Method: This method will read the file that is 
+	* located in the root that it is given. First of all the method will 
+	* check if the file has more numbers to read. After this the method 
+	* will fill a first stack and then when it is filled we will introduce
+	* all the numbers again in another stack so we have them all in the 
+	* correct order.
+	* 									 
+	* Calling arguments: This method receives a String with the direction
+	* of the file
+	* 																     
+	* Return value: This method will return a stack called number_Stack_File
+	****************************************************************************/
 
 	public Stack<Integer> read_File(String fileRoute) throws FileNotFoundException {
 		File file = new File(fileRoute);
@@ -46,6 +53,10 @@ public class ReadFile {
 		return number_Stack_File;
 	}
 
+	/***************************************************************************************************************
+	 * This method is the constructor of this class																   *
+	 ***************************************************************************************************************/
+	
 	public ReadFile(String fileName) {
 		this.fileName = fileName;
 	}
