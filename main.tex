@@ -30,7 +30,9 @@
 % Vietnamese
 %\usepackage{vntex}
 
-% Natbib
+% Natbib 
+
+
 \usepackage[sort&compress,numbers,square]{natbib}
 \bibliographystyle{mplainnat}
 
@@ -79,9 +81,9 @@
         {\itshape\Large Data Structure laboratory\par}
         \vfill
         {\Large Authors: \par}
-        {\Large Andrés González Varela  \par Juan Gigante Rios\par  María Jesús Dueñas Recuero }
+        {\Large  Juan Gigante Rios\par Andrés González Varela  \par  María Jesús Dueñas Recuero }
         \vfill
-        {\Large October 2021 \par}
+        {\Large 11th November 2021 \par}
     \end{titlepage}
 	
 
@@ -102,7 +104,7 @@
         The main idea to develop this project is to divide it into classes according to each of the functions. That is why, we have created a \textbf{ReadFile} class which is in charge of reading the file provided to us for the practice, the \textbf{Problem} class where most of the code will be developed solving the problem and finally, the \textbf{Main} class where only calls to methods of the classes will be made and the result will be shown by console. All this by means of an object oriented programming.
 
 
-        \subsubsection{Developing ReadFile class}
+        \subsubsection{ReadFile class}
         \begin{itemize}
             \item \textbf{read-File}\par
             In order to read the file given to us, and taking into account that the practices consist in the use and handling of stacks, we have considered storing the information of this file in a stack,\textbf{aux-number-Stack-file }.
@@ -121,7 +123,7 @@
         
 
 \newpage
-        \subsubsection{Developing Problem class}
+        \subsubsection{Problem class}
             \begin{itemize}
                 \item \textbf{fill-Stacks}
                 This method is the body of the class, it is where we try to solve the practice. The main idea of this method is to read the file-stack (containing the numbers to be read) where the first number of this file is put into the first-stack and the last top number in this row is added to the file-stack.\par
@@ -140,7 +142,7 @@
 
 \newpage
                 \item \textbf{counter-nine}
-                This is the second part of the program where the sum of all the numbers in the second-stack is carried out. If the sum between two or more addends is nine or more, a nine is added to the third-stack.[Figure 3]
+                This is the second part of the program where the sum of all the numbers in the second-stack is carried out. If the sum between two or more addends is nine or more, a nine is added to the third-stack.
                 \begin{figure}[h]
                      \centering
                      \includegraphics[width=300pt\textwidth]{counter-nine.png}
@@ -155,7 +157,7 @@
         \subsubsection{EmptyStackException}
         This is the custom exception class that we have created. This exception will be thrown when any stack is empty and will prevent the program from crashing.
         \subsubsection{Developing Main class}
-        In the main class we have created 3 stacks that, which we will use in the whole problem, then after this we also create and object from the class problem for work with it latelly We ask for the direction of the file in your computer (C://naturales.dat.txt) for example, and the Scanner gets the direction of the file.\par When we obtain the direction of it we create a readFile object and with this we invoke the method read form the class readFile and we will obtain the stack with all the numbers. \par
+        In the main class we have created 3 stacks that, which we will use in the whole problem, then after this we also create and object from the class problem for work with it lately We ask for the direction of the file in your computer (C://naturales.dat.txt) for example, and the Scanner gets the direction of the file.\par When we obtain the direction of it we create a readFile object and with this we invoke the method read form the class readFile and we will obtain the stack with all the numbers. \par
     After this we fill the second stack with the method fill-Stacks from the class Problem.Last of all we take the method nine-counter to count the amount of 9's that we have in the third stack
         \begin{figure}[h]
             \centering
@@ -165,7 +167,7 @@
         \end{figure}
         
         
-   \subsection{Tecnical requirement and running}
+   \subsection{Technical requirement and running}
         \subsubsection{Generation bat}
         In order to be able to run the programme on an executable we have followed the following steps:
         \begin{itemize}
@@ -185,18 +187,185 @@
         
 	\newpage
 	\section{Queues}
-	
+	    \subsection{Problem}
+	    \subsection{Approach}
+	        \subsubsection{Main class}
+	     \subsection{Technical requirement and running}
+        \subsubsection{Generation bat}
+        In order to be able to run the programme on an executable we have followed the following steps:
+        \begin{itemize}
+            \item Create an executable jar of the developed project. 
+            \item In a text editor we have written with extension.bat,which we have called Start as if it were the demo of an application.
+                \begin{verbatim}
 
+                java -jar nameOfTheJarExecutable.jar
+                PAUSE;
+
+                \end{verbatim}
+        \end{itemize}
+        \subsubsection{Run program}
+        To be able to execute this bat the only thing that is needed is to make double click in the file that puts "Start", later, I will ask you the route of the file of which it is wanted to know the number of nines of the third stack.
+\newpage
 	\section{Lists}
+	    \subsection{Problem}
+	    The old library of a far away village opened an online platform for books hiring.Now, they want to automatize the process of adding the new books they buy to their catalogue. Using a .txt file with the list of bought books, they want to incorporate them to the system but classified by genre. They have four lists, one for each genre they are specialized in: “Novels”, “Sci-Fi”, “Biographies”, and “Children”. Remember that after adding the new books to the lists, they should be ordered by rating and title if their rating coincide, you can think about extending Comparable Class to make the ordering.\newline
+	    
+        The Books.txt file contains information about the books they have recently bought in the following format:\newline
+            \begin{center}
+                Title; Author; Genre; Rating\newline
+            \end{center}
+    
+        Recently, the library owners thought on having a top 10 ranking on their web. So, they also ask for a method that obtains the 3 best rated books from each “adult list” and the best one from the children’s list, and place them on a new list. Also, this list should be ordered by rating.\newline
+        
+        Finally, for promotion purposes, pick the last book in the top 10 list, set it the highest rating (5 stars), and place
+        it the first in the list, then, increment in 0.5 all the ratings of this list using \textbf{replaceAll()} method.\par
+        
+        The program should give as a result the 5 lists ordered by rating and title.\par
 
-	
+    \subsection{Approach}
+	    The main idea to develop this project is to divide it into classes according to each of the functions. That is why, we have created a \textbf{ReadFile} class which is in charge of reading the file provided to us for the practice, the \textbf{Problem} class where most of the code will be developed solving the problem ,the \textbf{Book} class where we will develop the objects for each book in the file, The \textbf{UnitaryOperator} class which content the method replaceAll() and the \textbf{Main} class where only calls to methods of the classes will be made and the result will be shown by console. All this by means of an object oriented programming.
+	    
+	    
+	    
+	    \subsubsection{ ReadFile class}
+	    The main function of this class is to read the file containing the information of the books in the library. \newline
 
+        The approach is that as the books are separated by ";", divide with the string tokenizer where each field will be stored in the variables tittle, author, genre and rating and these variables will be put together to create the objects books. One object for each book in the file.\newline
+
+        After dividing each of the sections and creating the book object, we add them to the list called list-book-file.
+        
+        As a note when creating the book objects, the rating attribute must be parsed because the String tokenizer only reads strings and this attribute is a double.
+        
+        This class also contains a method called ReadFile which is the constructor of the class.
+    
+	    \subsubsection{ Book class}
+	    
+	    The book class will be in charge of creating the objects with the following attributes: title, author, genre and punctuation.\newline
+
+         This class also contains each of the getters and setters corresponding to each attribute in order to access the information of the object and/or modify it, respectively.\newline
+
+         It has a method called toString() that we make use of it when we need to print the information of each object, its format is the following:\newline
+    
+            \begin{verbatim}
+            public String toString() {
+                return "Author=" + author + "\nTittle=" + tittle + "\nGenre=" + 
+                genre + "\nrating=" + rating +"\n"
+            }
+             \end{verbatim}
+        \begin{itemize}    
+            \item\textbf{compareTo() method}\newline
+                As we have to order the lists according to the score they have and if they coincide in this by the title of the book, we have decided to make this method according to the result which returns. The idea is that the object of book that there is in a list meets any of the following rules when compared to the book object passed as an argument, they will be sorted according to what they return.We are comparing the rating between the objects. Rules: \newline
+                
+                \begin{itemize}
+                    \item if( rating book a lower than rating book b) return 1.Book b has a greater rating.
+                    \item if( rating book a greater than rating book b) return -1.Book a has a greater rating.
+                    \item if( rating book a == rating book b), both books have the same rate son we will compare between their title (the first letter). \par
+                    
+                    For the comparison between titles we add the two to compare in an array and we order them, then we check with the same conditions as with the rating which one is higher or lower. \par  
+                    
+                    For example, in the first if if the psoicon zero of the array is greater than the one being compared a minus one is returned which implies that it is a title that goes before the one being compared.
+                \end{itemize}
+                This method is used by the implementation of the class comparable.
+          \end{itemize}
+
+
+	    \subsubsection{Problem class}
+	    This class will contain all the methods that will be needed to develop the list project, with the idea of only having to call them in the main.
+	    
+	    \begin{itemize}
+	        \item \textbf{Problem()}\newline
+	         The constructor method is a special method to create and initialise an object created from a class, in our case to create an object of the class "Problem".
+	        \item \textbf{fill-stacks() method} \newline
+	          The idea of this method is to read the list containing the books read from the file and classify them according to their genre when called in the main.\newline
+
+                If the list is empty it adds it directly, if it is not, it will check if it is not in the list and if it is, it will not operate with it. But if it is not, we call the \textbf{compareTo()} method to classify them by rating and title if the rating is the same.
+
+
+	        \item \textbf{top-ten() method }\newline
+	        It consists of creating a top ten of the books in the bookshop with three of each of the adult genres and one for children.\newline
+
+            The idea is to go through the adult lists up to position three and add them to the top ten list, while the list of children's books will only take the first one.\newline
+
+            To order them we follow the same approach as in previous methods.
+	        \item \textbf{top-ten-promo() method }\newline
+	        The curiosity of this method is that we go through the top ten list but we don't edit directly on it because when we make any modification we modify all the created lists.\newline
+
+            To solve this problem we have gone through the list and recreated each object in that list and added it to another one so as not to have any unnecessary modification.\newline
+
+            We moved the last book in the list and put it in the first one modifying its rating.\newline
+
+            Then we call the \textbf{replaceAll()} method where we change the value of all rating.\newline
+
+
+	        
+	    \end{itemize}
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    \subsubsection{UnitaryOperator class}
+	        We implement this class as described in the practice statement where it will contain the replaceAll() method.
+    \begin{itemize}
+    \item \textbf{replaceAll() method}\newline
+    The idea of this method is to pass a book as argument to obtain the score of that book and to modify it adding 0.5. It will return the book with the replaced score when the method is called.
+     \begin{verbatim}
+     
+     class Uo implements UnaryOperator<Book> {
+         public Book apply(Book book_to_replace) {
+             book_to_replace.setRating(book_to_replace.getRating()+0.5);
+      return book_to_replace;
+         }
+    }
+     \end{verbatim}
+\end{itemize}
+
+
+
+	    \subsubsection{Main class}
+	    For the visual operation of the lists program we have decided to represent it by means of a menu where each option will show one of the lists requested by the statement.\newline
+
+        The idea of the menu is the following:\par
+        \begin{enumerate}
+            \item Novel books
+            \item Sci-fi books
+            \item Biography books
+            \item Children books
+            \item Top 10 books
+            \item Top 10 books in promo
+            \item Exit
+        \end{enumerate}
+    Although the programme should only show five lists, we have included a last option showing the list that is modified when we add 0.5 to the score of the books, with the idea of showing that it also worked.
+    
+    \subsection{Technical requirements}
+        \subsubsection{Generation bat}
+            In order to be able to run the programme on an executable we have followed the following steps:
+        \begin{itemize}
+            \item Create an executable jar of the developed project. 
+            \item In a text editor we have written with extension.bat,which we have called Start as if it were the demo of an application.
+                \begin{verbatim}
+
+                java -jar nameOfTheJarExecutable.jar
+                PAUSE;
+
+                \end{verbatim}
+        \end{itemize}
+        \subsubsection{Run program}
+	     To be able to execute this bat the only thing that is needed is to make double click in the file that puts "Start", later, I will ask you the route of the file of which will show a menu where the user could select which ranking list it want to watch, if the user want close the program he will select the last option of the menu.
 	
 
 	
 %	\newpage
-	\bibliography{refs}
-	
+
 	
 	
 \end{document}
