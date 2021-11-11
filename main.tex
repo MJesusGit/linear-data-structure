@@ -181,15 +181,71 @@
                 \end{verbatim}
         \end{itemize}
         \subsubsection{Run program}
-        To be able to execute this bat the only thing that is needed is to make double click in the file that puts "Start", later, I will ask you the route of the file of which it is wanted to know the number of nines of the third stack.
+        To be able to execute this bat the only thing that is needed is to make double click in the file that puts "Start", later, I will ask you the route of the file of which it is wanted to know the number of nines of the third stack.\newline
+	
+        To run in any IDE it is necessary to follow the following steps:
+        \begin{enumerate}
+            \item Download and unzip the file containing the code.
+            \item Create a project in the IDE of use
+            \item Right click on the created project and click on the import option. 
+            \item Click on the file system option 
+            \item Select the folder with the code to execute
+            \item Add the package if necessary in each class
+            \item Run the program
+        \end{enumerate}
 	
 	
         
 	\newpage
 	\section{Queues}
 	    \subsection{Problem}
+	    A group of friends has decided to organise a music festival. There will be 3 stages in which there will be
+        different performances. You need to create a software to manage the festival's capacity. Each stage has its
+        own entrance doors, a capacity, and a valid ticket type for the stage. The specifications for each scenario are detailed below:\newline
+        \begin{itemize}
+            \item Main Stage "Coliseum"
+                \begin{itemize}
+                    \item Capacity: 25
+                    \item Ticket Type: "Platinum"
+                    \item Number of entries: 1 (2 optional)
+                \end{itemize}
+            \item Secondary Scenario "Roar of the Sea"
+                \begin{itemize}
+                    \item Capacity: 20
+                    \item Ticket type: “Platinum”, “Gold”, “SilverSea”
+                    \item Number of entries: 1
+                \end{itemize}
+            \item Third Stage “Siren song”
+                \begin{itemize}
+                    \item Capacity: 15
+                    \item Ticket type: “Platinum”, “Gold”, “SilverSiren”
+                    \item Number of entries: 1
+                \end{itemize}
+        \end{itemize}\newline
+        
+    The software must simulate the entry of the participants, which will be read from a file called “festival.dat”.
+    The result of the program will be the number of people who have entered each stage and the time it has taken
+    to fill the capacity. To do this, an average duration has been estimated for each type of ticket:
+
+        \begin{itemize}
+            \item Platinum: 2 min
+            \item Gold: 3 min
+            \item SilverSea: 4 min
+            \item SilverSiren: 4 min
+        \end{itemize}
+
 	    \subsection{Approach}
+    This program allows us to manage and control access to a festival held in a closed recital. To do this, we have had to consider that said venue has different scenarios, which have different access queues. In turn, each of these scenarios has different tickets to access. The program oversees collecting and reading information about the people who are going to enter the venue as well as distributing people between the different queues of the venue to access it, so that it calculates the time they take to enter and the number of people entering each queue. For the program to work, just enter the path of the file that contains the information of the people who are going to enter. Once we enter it, the program will perform the pertinent calculations to return the information described above to the console. \newline
+
+    In order to improve the efficiency of the program, it has been designed in a modular way. From this principle arise the four different classes that make up our program; \textbf{the Readfiles} class, \textbf{the Person} class,\textbf{the Problem } class, and \textbf{the Main}  class. Together they make up the total functionality of our program. 
+            \subsubsection{ ReadFile class}
+            This class is in charge of reading files. In it, the text data related to the different people is collected, which can be stored in any file on our computer and is read for later organization in the different queues. For this we have in this class a method that is responsible for returning us a queue of text data, which will later be used to create person objects. 
+             \subsubsection{ Person class}
+            This class helps us to define person objects. It has getters and setters, which provide us with the information related to the two attributes of this class: the name of the stadium and the ticket of the person. 
+            \subsubsection{Problem class}
+            This class helps us to organise the information we have received from reading the files. In it we have a method to create a new queue of person objects in which are all those people who want to enter, which is generated with the data previously received; with a method to distribute the people in the different rows based on the capacity, the stage they want to access and the type of ticket they have; and, finally, with a method that calculates the time it takes for each of the queues, taking as a reference the types of tickets that each person who wants to access has and is in the queue. 
 	        \subsubsection{Main class}
+	        This class is the main class. Thanks to it, we control all the aspects that the other classes of our program facilitate us. In it, the reading of files is ordered, then the general queue of people objects is generated, as well as the distribution of people in the different queues. In addition to all this, from this class it is also ordered to print on the console the different times that the queues take as well as the people who have accessed in addition to the total time it has taken to fill the room. 
 	     \subsection{Technical requirement and running}
         \subsubsection{Generation bat}
         In order to be able to run the programme on an executable we have followed the following steps:
@@ -204,7 +260,18 @@
                 \end{verbatim}
         \end{itemize}
         \subsubsection{Run program}
-        To be able to execute this bat the only thing that is needed is to make double click in the file that puts "Start", later, I will ask you the route of the file of which it is wanted to know the number of nines of the third stack.
+        To be able to execute this bat the only thing that is needed is to make double click in the file that puts "Start", later, I will ask you the route of the file of which it is wanted to know the number of nines of the third stack.\newline
+	
+        To run in any IDE it is necessary to follow the following steps:
+        \begin{enumerate}
+            \item Download and unzip the file containing the code.
+            \item Create a project in the IDE of use
+            \item Right click on the created project and click on the import option. 
+            \item Click on the file system option 
+            \item Select the folder with the code to execute
+            \item Add the package if necessary in each class
+            \item Run the program
+        \end{enumerate}
 \newpage
 	\section{Lists}
 	    \subsection{Problem}
@@ -360,9 +427,22 @@
                 \end{verbatim}
         \end{itemize}
         \subsubsection{Run program}
-	     To be able to execute this bat the only thing that is needed is to make double click in the file that puts "Start", later, I will ask you the route of the file of which will show a menu where the user could select which ranking list it want to watch, if the user want close the program he will select the last option of the menu.
+	     To be able to execute this bat the only thing that is needed is to make double click in the file that puts "Start", later, I will ask you the route of the file of which will show a menu where the user could select which ranking list it want to watch, if the user want close the program he will select the last option of the menu.\newline
 	
+        To run in any IDE it is necessary to follow the following steps:
+        \begin{enumerate}
+            \item Download and unzip the file containing the code.
+            \item Create a project in the IDE of use
+            \item Right click on the created project and click on the import option. 
+            \item Click on the file system option 
+            \item Select the folder with the code to execute
+            \item Add the package if necessary in each class
+            \item Run the program
+        \end{enumerate}
+        
 
+        
+        
 	
 %	\newpage
 
